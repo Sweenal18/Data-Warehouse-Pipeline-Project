@@ -1,0 +1,117 @@
+version: 2
+
+models:
+  - name: dim_users
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_user_personal
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_user_address
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_user_company
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_user_finance
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_products
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_product_details
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_product_reviews
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+
+  - name: dim_recipes
+    columns:
+      - name: recipe_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_todos
+    columns:
+      - name: todo_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_quotes
+    columns:
+      - name: quote_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_sales
+    columns:
+      - name: cart_id
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        tests:
+          - not_null
+
+  - name: fact_cart_items
+    columns:
+      - name: cart_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+
+  - name: fact_posts
+    columns:
+      - name: post_id
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        tests:
+          - not_null
+
+  - name: fact_comments
+    columns:
+      - name: comment_id
+        tests:
+          - unique
+          - not_null
+      - name: post_id
+        tests:
+          - not_null

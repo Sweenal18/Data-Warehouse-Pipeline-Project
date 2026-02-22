@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: staging
+    schema: staging
+    tables:
+      - name: users
+      - name: products
+      - name: product_reviews
+      - name: carts
+      - name: cart_items
+      - name: posts
+      - name: comments
+      - name: recipes
+      - name: todos
+      - name: quotes
